@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu do Usuário</title>
+</head>
+<body>
+    <h1>Olá, {{ usuario.nome }}!</h1>
+    <ul>
+        <li><a href="{{ url_for('procurar_anuncios', usuario_id=usuario.id) }}">Procurar Anúncios</a></li>
+        <li><a href="{{ url_for('ver_minhas_compras') }}">Ver Minhas Compras</a></li>
+        <li><a href="{{ url_for('ver_minhas_vendas') }}">Ver Minhas Vendas</a></li>
+        <li><a href="{{ url_for('minhas_perguntas') }}">Minhas Perguntas</a></li>
+        <li><a href="{{ url_for('lista_favoritos') }}">Lista de Favoritos</a></li>
+        <li><a href="{{ url_for('criar_categoria') }}">Criar Categoria</a></li>
+        <li><a href="{{ url_for('voltar_menu') }}">Sair</a></li>
+    </ul>
+</body>
+</html>

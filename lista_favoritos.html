@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Favoritos</title>
+</head>
+<body>
+    <h1>Lista de Favoritos</h1>
+    <ul>
+        {% for favorito in favoritos %}
+            <li>
+                <h3>Produto: {{ favorito.produto }}</h3>
+                <p>Preço: R$ {{ favorito.preco }}</p>
+                <p>Proprietário: {{ favorito.proprietario }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('menu_usuario', usuario_id=usuario.id) }}">Voltar ao Menu</a>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ver Minhas Vendas</title>
+</head>
+<body>
+    <h1>Minhas Vendas</h1>
+    <ul>
+        {% for venda in vendas %}
+            <li>
+                <h3>Produto: {{ venda.produto }}</h3>
+                <p>Preço: R$ {{ venda.preco }}</p>
+                <p>Data da Venda: {{ venda.data }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('menu_usuario', usuario_id=usuario.id) }}">Voltar ao Menu</a>
+</body>
+</html>

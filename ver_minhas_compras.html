@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ver Minhas Compras</title>
+</head>
+<body>
+    <h1>Minhas Compras</h1>
+    <ul>
+        {% for compra in compras %}
+            <li>
+                <h3>Produto: {{ compra.produto }}</h3>
+                <p>Preço: R$ {{ compra.preco }}</p>
+                <p>Data da Compra: {{ compra.data }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('menu_usuario', usuario_id=usuario.id) }}">Voltar ao Menu</a>
+</body>
+</html>

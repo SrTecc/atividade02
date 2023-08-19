@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Procurar Anúncios</title>
+</head>
+<body>
+    <h1>Procurar Anúncios</h1>
+    <ul>
+        {% for anuncio in anuncios %}
+            <li>
+                <h3>{{ anuncio.titulo }}</h3>
+                <p>{{ anuncio.descricao }}</p>
+                <p>Preço: R$ {{ anuncio.preco }}</p>
+                <p>Categoria: {{ anuncio.categoria }}</p>
+                <p>Proprietário: {{ anuncio.proprietario }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('menu_usuario', usuario_id=usuario.id) }}">Voltar ao Menu</a>
+</body>
+</html>

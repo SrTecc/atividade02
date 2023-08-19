@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minhas Perguntas</title>
+</head>
+<body>
+    <h1>Minhas Perguntas</h1>
+    <ul>
+        {% for pergunta in perguntas %}
+            <li>
+                <h3>Produto: {{ pergunta.produto }}</h3>
+                <p>Pergunta: {{ pergunta.pergunta }}</p>
+                <p>Resposta: {{ pergunta.resposta }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('menu_usuario', usuario_id=usuario.id) }}">Voltar ao Menu</a>
+</body>
+</html>
